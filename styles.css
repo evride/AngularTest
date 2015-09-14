@@ -1,0 +1,160 @@
+html{
+	height:100%;
+}
+body{
+	margin:0;
+	background: linear-gradient(45deg, #90C 0%,#FE0 100%);
+	font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+a{
+	text-decoration:none;
+}
+img{
+	vertical-align:middle;
+}
+div#BodyOverlay{
+	height:100vh;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGUlEQVQ4y2NgoBJwoJAedcGoC0ZdMOAuAABF0hABJ/8lyQAAAABJRU5ErkJggg==);
+	background-attachment: fixed;
+	
+}
+header{
+	height:80px;
+	background:#EFEFEF;
+	display: flex;
+	flex-direction: row;
+	justify-content:space-between;
+	align-items:flex-end;
+}
+header .logo{
+	margin-left:10px;
+}
+.logo{
+	font-family:'Bitter', Arial, sans;
+	font-weight:700;
+	margin:0;
+}
+.logo span.orange{
+	color:#FE0;
+	text-shadow:1px 1px #93288C;
+}
+.logo span.purple{
+	color:#93288C;
+	text-shadow:1px 1px #FE0;
+}
+nav{
+	margin-bottom:5px;
+}
+nav a{
+	padding:10px;
+	text-decoration:none;
+	font-weight:bold;
+	color:#999;
+}
+nav a:hover{	
+	transition: color 0.5s ease;
+    color: #93288C;
+}
+main{
+	display:flex;
+	justify-content:center;
+	flex-direction:row;
+}
+
+@media only screen and (max-width: 800px)  {
+	main div.content{
+		width:80%;
+		margin:50px 0 0 0;
+	}
+}
+@media only screen and (min-width: 800px)  {
+	main div.content{
+		width:600px;
+		margin:50px 0 0 0;
+	}
+}
+div.content h2{
+	color:#FFF;
+	margin-left:5px;
+    text-shadow: 0 0 10px #93288C;
+}
+div.searchbox input{
+	background:#FFF;
+	padding:10px;
+	border-radius:5px;
+	border:none;
+	width:100%;
+}
+div.searchbox input:focus { 
+    outline: none !important;
+    border-color: #719ECE;
+    box-shadow: 0 0 10px #999;
+}
+div.weather-result{
+	background:#FFF;
+	margin-left:20px;
+	padding:10px 10px 10px 30px;
+	border-bottom-left-radius:5px;
+	border-bottom-right-radius:5px;
+}
+div#WeatherInfo{
+	
+}
+div#WeatherInfo h3{
+	font-size:28px;
+	margin: 10px 0 10px 10px;
+}
+div.last-updated{
+	color:#999;
+	font-size:0.8em;
+	text-align:right;
+}
+span#Current{
+	font-size:22px;
+	font-weight:bold;
+}
+div#WeatherInfo ul{
+	list-style:none;
+	margin:10px 0 0 0;
+	padding:0;
+}
+ul li{
+	display:inline;
+	margin: 0 10px 0 10px;
+}
+span.val{
+	font-weight:bold;
+}
+hr{
+	margin:10px 30px 10px 30px;
+	border-left:none;
+	border-color:#CCC;
+}
+div.content-block{
+	background:#FFF;
+	border-radius:5px;
+	padding:10px;
+}
+div.content-flex{
+	display:flex;
+}
+form#ContactForm{
+	display:flex;
+	flex-grow:1;
+	flex-direction:column;
+}
+form#ContactForm textarea{
+	flex-grow:1;
+	font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+form#ContactForm textarea, form#ContactForm input{
+	margin:5px 10px;
+	padding:5px;
+}
+#ContactInfo a{
+	color:#666;
+}
+.form-status{
+	padding:5px;
+	text-align:center;
+}

@@ -1,0 +1,18 @@
+<!doctype html>
+<html ng-app="WeatherApp">
+	<head>
+		<link href='https://fonts.googleapis.com/css?family=Bitter:700' rel='stylesheet' type='text/css'>
+		<link href="styles.css"  rel="stylesheet" type="text/css">
+		<title>ZipWeather :: Weather in your local area</title>
+	</head>
+	<body>
+		<div id="BodyOverlay">
+		<header><a href="#/"><h1 class="logo"><span class="orange">Zip</span><span class="purple">Weather</span></h1></a><nav><a ng-href="#/">Home</a><a ng-href="#/about">About</a><a ng-href="#/contact">Contact</a></nav></header>
+		<main ng-view>
+		</main>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.min.js"></script>
+		<script src="main.js"></script>
+  </body>
+</html>

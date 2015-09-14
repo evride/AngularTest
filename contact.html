@@ -1,0 +1,21 @@
+<div class="content">
+	<h2>Contact</h2>
+	<div class="content-block content-flex">
+		<div id="ContactInfo">
+			<h4>Evan Ridenour</h4>
+			<br/>
+			<span>(574) 343-6118</span><br/>
+			<a href="mailto:eridenour@gmail.com">eridenour@gmail.com</a><br/>
+			<a href="https://linkedin.com/in/evride">LinkedIn</a><br/>
+			<a href="https://github.com/evride">Github</a><br/>
+		</div>
+		<hr/>
+		<form id="ContactForm">
+				<input type="text" name="subject" ng-model="subject" placeholder="Subject (Optional)" ng-disabled="formsent">
+				<input type="email" name="email" ng-model="email" placeholder="Sender Email (Optional)" ng-disabled="formsent">
+				<textarea ng-model="message" placeholder="Message" rows="7" ng-disabled="formsent" ng-minlength="2" ng-required="true"></textarea>
+				<input ng-hide="sendState" type="submit" value="Send" ng-click="sendMessage()" ng-disabled="formsent">
+				<div class="form-status" ng-show="sendState">{{sendState}}</div>
+		</form>
+	</div>
+</div>

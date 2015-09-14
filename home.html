@@ -1,0 +1,27 @@
+<div class="content">
+	<h2>Weather In Your Area</h2>
+	<div class="searchbox">
+		<input type="text" ng-pattern="/^[0-9]{5,5}$/" maxlength="5" ng-model="zipcode" placeholder="Zipcode" ng-required="true" ng-change="zipChanged()">
+	</div>
+	<div id="WeatherInfo" class="weather-result" ng-show="weather">
+		<h3>{{weather.location}}
+			<a href="https://www.google.com/maps/search/{{weather.coord.lat}},{{weather.coord.lon}}" target="_blank">
+				<img src="location16.png" />
+			</a>
+		</h3>
+		<img src="http://openweathermap.org/img/w/{{weather.icon}}.png" alt="{{weather.weather.description}}"/>
+		<span id="Current">{{weather.condition}} {{weather.temp | number: 0}}&deg;</span>
+	<ul>
+		<li>Hi: <span class="val">{{weather.temp_max | number: 0}}&deg;</span> Lo: <span class="val">{{weather.temp_min | number: 0}}&deg;</span></li>
+		<li>Humidity: <span class="val">{{weather.humidity | number: 0}}%</span></li>
+		<li>Wind: <span class="val">{{weather.wind | number : 0}} mph</span></li>
+	</ul>
+
+	<div class="last-updated">Updated: {{weather.timestamp | date : 'EEEE hh:mm a'}}</div>
+
+	</div>
+	<div id="NotFound" class="weather-result" ng-show="notfound">
+		<h3>Oops!</h3>
+		We can't find a result for that zipcode.
+	</div>
+</div>
